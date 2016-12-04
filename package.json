@@ -1,0 +1,24 @@
+{
+  "name": "socket.io-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "socketio-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zepspaiva/socket.io-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zepspaiva/socket.io-server/issues"
+  },
+  "homepage": "https://github.com/zepspaiva/socket.io-server#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "socket.io": "^1.7.1"
+  }
+}
