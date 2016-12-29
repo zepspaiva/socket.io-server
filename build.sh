@@ -1,1 +1,1 @@
-docker build .
+docker build . -t socket.io-server
