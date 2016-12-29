@@ -15,7 +15,7 @@ io.sockets.on('connection', function (socket) {
 
 	socket.on('message', function(data) {
 		console.log(data);
-		io.sockets.in([data.signal,data.ctx].join('-')).emit('message', data.signal);
+		io.sockets.in([data.signal,data.ctx].join('-')).emit('message', data);
 		socket.emit ('messageSuccess', data);
 	});
 
