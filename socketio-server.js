@@ -21,6 +21,8 @@ io.sockets.on('connection', function (socket) {
 
 });
 
+app.use(express.static('/static'));
+
 console.log('will listen on', port);
 
 server.listen(port);
