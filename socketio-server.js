@@ -21,7 +21,12 @@ io.sockets.on('connection', function (socket) {
 
 });
 
-app.use(express.static('/static'));
+app.use('/', express.static('/static', {
+maxage: '120h', // 120h 5 days
+setHeaders: function(res, path) {
+res.setHeader("Expires", new Date(Date.now() + 86400000*5).toUTCString());
+}
+}));
 
 console.log('will listen on', port);
 
