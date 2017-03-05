@@ -21,13 +21,18 @@ io.sockets.on('connection', function (socket) {
 
 });
 
+app.get('/delivery/*', function(res, path) {
+	res.writeHead(302, {'Location': 'http://data.mobyfood.com.br/' + req.url});
+	res.end();
+});
+
 app.use('/', express.static('/static', {
-maxage: '120h', // 120h 5 days
-setHeaders: function(res, path) {
-res.setHeader("Expires", new Date(Date.now() + 86400000*5).toUTCString());
-}
+	maxage: '120h',
+	setHeaders: function(res, path) {
+		res.setHeader("Expires", new Date(Date.now() + 86400000*5).toUTCString());
+	}
 }));
 
-console.log('will listen on', port);
+console.log('Will listen on', port);
 
 server.listen(port);
