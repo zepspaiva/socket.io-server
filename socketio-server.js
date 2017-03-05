@@ -21,7 +21,7 @@ io.sockets.on('connection', function (socket) {
 
 });
 
-app.get('/delivery/*', function(res, path) {
+app.get('/delivery/*', function(req, res) {
 	res.writeHead(302, {'Location': 'http://data.mobyfood.com.br/' + req.url});
 	res.end();
 });
